@@ -1,0 +1,19 @@
+<!doctype html>
+<html ng-app="myapp">
+
+<body>
+
+	<div ng-controller="MainController as vm">
+
+		<h3>{{vm.counter}}</h3>
+		<button ng-click="vm.selDataSource()">select datasource</button>
+		<button ng-click="vm.selType()">select type</button>
+		<button ng-show="vm.isSheetLoaded" ng-click="vm.updateCounter()">update used fields</button>
+
+		<pre id="logger" style="position:fixed; left: 20px; top: 80px"></pre>
+		<pre id="context" style="position:fixed; left: 50%; top: 80px">{{vm.ctx}}</pre>
+	</div>
+
+	<script src="build/index.js"></script>
+</body>
+</html>
